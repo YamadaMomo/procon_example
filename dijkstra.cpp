@@ -29,7 +29,6 @@ int main(int argc, char *argv[]){
     int v = que.top().second;
     int c = que.top().first;
     que.pop();
-    if(dp[v] < c)continue;
     for (int i = 0; i < g[v].size(); i++) {
       edge e = g[v][i];
       if(dp[e.to] > c + e.cost){
